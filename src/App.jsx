@@ -9,7 +9,7 @@ function App() {
     <Router>
         <Header></Header>
       <Routes>
-        <Route index element={ <Home></Home> } ></Route>
+        <Route index element={ <Home> </Home> } ></Route>
         <Route index element={<h1>Hello</h1>}></Route>
         <Route path="/movie/:id" element={<h1>Movie Id</h1>}></Route>
         <Route path="/movies/:type" element={<h1>Movie Type</h1>}></Route>
