@@ -4,17 +4,33 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .headerLeft,
 .headerRight {
   display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.navLinks {
+  display: flex;
   align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 768px) {
+  .navLinks {
+    margin-left: 550px;
+  }
 }
 
 a > span {
-  margin: 0 30px;
-  font-size: 1.3rem;
+  margin: 0 15px;
+  font-size: 1.9rem;
   cursor: pointer;
   color: white;
 }
@@ -30,4 +46,20 @@ a > span:hover {
 
 .user__avatar {
   font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+  }
+
+  .headerLeft {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a > span {
+    margin: 10px;
+    font-size: 1.1rem;
+  }
 }
